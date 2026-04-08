@@ -1,0 +1,72 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block more_css  %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+{% block content %}
+
+
+<main>
+<!-- CONTACT FORM -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card p-5">
+                    <h2 class="section-title text-center mb-4">Get In Touch</h2>
+                    <p class="text-center text-secondary mb-4">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+                    <form class="contact-form" action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">First Name</label>
+                                <input type="text" name="firstName" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" name="lastName" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="subject" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <h5>📧 Email</h5>
+                    <p>nandaniyahetvi92@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <h5>📞 Phone</h5>
+                    <p>+91 7863055751</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <h5>📍 Address</h5>
+                    <p>India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

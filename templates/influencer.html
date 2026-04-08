@@ -1,0 +1,106 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block more_css  %}
+<link rel="stylesheet" href="{% static 'css/influencer.css' %}">
+{% endblock %}
+{% block content %}
+
+<main>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+
+      <div class="form-card p-4 p-md-5">
+        <h2 class="text-center fw-bold mb-2">Join as Influencer</h2>
+        <p class="text-center text-secondary mb-4">
+          Create your influencer profile and start collaborating with brands
+        </p>
+
+        <form>
+
+          <!-- Full Name -->
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="you@email.com" required>
+          </div>
+
+          <!-- Password -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" required>
+            </div>
+          </div>
+
+
+        <!-- Contact Number -->
+          <div class="mb-3">
+            <label class="form-label">Contact Number</label>
+            <input type="email" class="form-control"  required>
+          </div>
+
+          <!-- Instagram -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Instagram ID</label>
+              <input type="text" class="form-control" placeholder="@username">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Instagram Followers</label>
+              <input type="number" class="form-control" placeholder="e.g. 25000">
+            </div>
+          </div>
+
+          <!-- Facebook -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Facebook ID</label>
+              <input type="text" class="form-control" placeholder="facebook profile link">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Facebook Followers</label>
+              <input type="number" class="form-control" placeholder="e.g. 12000">
+            </div>
+          </div>
+
+          <!-- Category -->
+          <div class="mb-4">
+            <label class="form-label">Domain / Category</label>
+            <select class="form-select" required>
+              <option value="">Select your category</option>
+              <option>Technology</option>
+              <option>Fashion</option>
+              <option>Food</option>
+              <option>Fitness</option>
+              <option>Beauty</option>
+              <option>Kids</option>
+            </select>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn submit-btn w-100">
+            Create Influencer Account
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</main>
+{% endblock %}

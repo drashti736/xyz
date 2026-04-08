@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block more_css %}
+<link rel="stylesheet" href="{% static 'css/marketplace.css' %}" />
+<style>
+  .creator-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+  }
+
+  .creator-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .creator-img {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .category-badge {
+    background: #6610f2;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+
+  .followers {
+    font-weight: 600;
+    color: #555;
+  }
+
+  .view-btn {
+    background: #6610f2;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .view-btn:hover {
+    background: #4e0bbd;
+    color: white;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+<div class="container py-5">
+
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Explore All Influencers</h2>
+    <p class="text-muted">
+      Discover verified creators and connect for powerful collaborations.
+    </p>
+  </div>
+
+  {% if allinfluencer %}
+  <div class="row g-4">
+
+    {% for inf in allinfluencer %}
+    <div class="col-md-3 col-sm-6">
+
+      <div class="card creator-card h-100">
+
+        <img src="{{ inf.profile_image.url }}" class="creator-img img-fluid">
+
+        <div class="card-body text-center">
+
+          <h5 class="fw-bold mb-1">{{ inf.full_name }}</h5>
+
+          <span class="category-badge">
+            {{ inf.full_name }}
+          </span>
+
+          <p class="followers mt-2">
+            {{ inf.instagram_followers }} Followers
+          </p>
+
+          <a href="{% url 'influencerprofile' pk=inf.pk %}" 
+             class="btn btn-info view-btn w-100 mt-2">
+             View Profile
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+  {% else %}
+
+  <div class="text-center">
+    <h5>No Influencers Found</h5>
+  </div>
+
+  {% endif %}
+
+</div>
+
+</main>
+
+{% endblock %}

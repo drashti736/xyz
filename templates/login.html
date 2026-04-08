@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block content %}
+
+<main style="margin-top: 100px">
+  <!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login | INFLUERA</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+  </head>
+
+  <body>
+    <section class="login-section">
+      <div class="login-card">
+        <h2>Welcome Back</h2>
+        <p class="sub-text">Login to your INFLUERA account</p>
+
+        <form method="POST" action="{% url 'login' %}">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter username" />
+          </div>
+
+          <select name="role" class="form-select mb-3" aria-label="Default select example" required>
+            <option selected>---Select Role---</option>
+            <option value="brand">Brand</option>
+            <option value="influencer">Influencer</option>
+          </select>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password" />
+          </div>
+          <p class="text-danger">
+            {% if error_msg %}
+            {{ error_msg }}
+            {% else %}
+            {% endif %}
+          </p>
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+      </div>
+    </section>
+  </body>
+
+  </html>
+</main>
+
+{% endblock %}

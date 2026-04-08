@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+<div class="container py-5">
+    <h2 class="mb-4 fw-bold text-center">All Brands</h2>
+
+    <div class="row g-4">
+        {% for brand in brands %}
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 rounded-4 h-100">
+                <div class="card-body text-center">
+
+                    {% if brand.logo %}
+                        <img src="{{ brand.logo.url }}"
+                             class="rounded-circle mb-3"
+                             width="100" height="100"
+                            >
+                    {% else %}
+                        <div class="bg-light mb-3 d-flex align-items-center justify-content-center"
+                             style="width:100px;height:100px;margin:auto;">
+                            <span class="fw-bold text-muted">
+                                {{ brand.user.username|first|upper }}
+                            </span>
+                        </div>
+                    {% endif %}
+
+                    <h5 class="fw-bold">{{ brand.user.username }}</h5>
+                    <p class="text-muted">{{ brand.industry }}</p>
+
+                    <a href="{% url 'view_brand' brand.id %}"
+                       class="btn btn-outline-dark btn-sm rounded-pill">
+                        View Profile
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No brands available.</p>
+        {% endfor %}
+    </div>
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block more_css  %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+{% block content %}
+
+<main>
+
+<!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="section-title display-4 mb-4">About INFLUERA</h1>
+            <p class="lead text-secondary mb-5">
+                Connecting brands with influencers to create authentic partnerships and drive meaningful results.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title mb-4">Our Story</h2>
+                <p class="text-secondary mb-4">
+                    INFLUERA was born from the vision to revolutionize influencer marketing by creating a transparent,
+                    efficient, and mutually beneficial platform for brands and creators alike.
+                </p>
+                <p class="text-secondary mb-4">
+                    We believe in the power of authentic connections and genuine collaborations that drive real results.
+                    Our platform empowers brands to find the perfect influencers and enables creators to monetize their
+                    passion while building meaningful relationships.
+                </p>
+                <p class="text-secondary">
+                    Join thousands of brands and influencers who trust INFLUERA to make their collaborations successful.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <h5 class="mb-3">Our Mission</h5>
+                    <p class="text-secondary">
+                        To democratize influencer marketing by providing a seamless platform where creativity meets
+                        commerce, fostering authentic partnerships that benefit everyone involved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- STATS -->
+    <section class="container py-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <h3 class="section-title mb-2">10K+</h3>
+                    <p class="text-secondary">Active Influencers</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <h3 class="section-title mb-2">500+</h3>
+                    <p class="text-secondary">Partner Brands</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <h3 class="section-title mb-2">50K+</h3>
+                    <p class="text-secondary">Successful Campaigns</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <h3 class="section-title mb-2">98%</h3>
+                    <p class="text-secondary">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - Swastik Donation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .success-container { background: white; border-radius: 24px; box-shadow: 0 25px 55px rgba(140, 29, 64, 0.2); max-width: 500px; width: 100%; padding: 50px; text-align: center; }
+        .success-icon { width: 120px; height: 120px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4); animation: scaleIn 0.5s ease-out; }
+        @keyframes scaleIn { 0% { transform: scale(0); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .success-icon i { color: white; font-size: 3.5rem; }
+        h1 { font-family: 'Playfair Display', serif; color: #059669; font-size: 2rem; font-weight: 800; margin-bottom: 15px; }
+        .donor-info { background: #f8f9fa; border-radius: 16px; padding: 25px; margin: 25px 0; }
+        .donor-info p { color: #666; margin-bottom: 10px; font-size: 1rem; }
+        .donor-info .amount { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 800; color: #8c1d40; margin: 15px 0; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+        .btn-receipt { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #8c1d40, #c03a6b); color: white; text-decoration: none; padding: 16px 30px; border-radius: 50px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(140, 29, 64, 0.3); }
+        .btn-receipt:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(140, 29, 64, 0.4); color: white; }
+        .btn-home { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: white; color: #8c1d40; text-decoration: none; padding: 14px 30px; border-radius: 50px; font-weight: 600; border: 2px solid #8c1d40; transition: all 0.3s ease; }
+        .btn-home:hover { background: #8c1d40; color: white; }
+        .thank-you { color: #666; font-size: 0.95rem; margin-top: 25px; }
+        @media (max-width: 576px) { .success-container { padding: 35px 25px; } h1 { font-size: 1.6rem; } .donor-info .amount { font-size: 2rem; } }
+        /* Toast Styles */
+        .toast-notification { position: fixed; top: 100px; right: 20px; z-index: 9999; min-width: 300px; padding: 20px 25px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transform: translateX(400px); opacity: 0; transition: all 0.4s; background: linear-gradient(135deg, #10b981, #059669); color: white; }
+        .toast-notification.show { transform: translateX(0); opacity: 1; }
+        .toast-notification.hide { transform: translateX(400px); opacity: 0; }
+        .toast-content { display: flex; align-items: center; }
+        .toast-icon { font-size: 1.5rem; margin-right: 12px; }
+        .toast-title { font-weight: 600; font-size: 1rem; }
+        .toast-message { font-size: 0.9rem; opacity: 0.95; }
+        .toast-close { position: absolute; top: 10px; right: 12px; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; opacity: 0.7; }
+        .toast-progress { position: absolute; bottom: 0; left: 0; height: 4px; background: rgba(255,255,255,0.5); border-radius: 0 0 12px 12px; width: 100%; animation: progress 4s linear forwards; }
+        @keyframes progress { from { width: 100%; } to { width: 0%; } }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h1>Payment Successful!</h1>
+        <div class="donor-info">
+            <div class="amount">₹{{ amount }}</div>
+        </div>
+        <div class="btn-group">
+            
+            <a href="{% url 'home' %}" class="btn-home"><i class="fas fa-home"></i> Back to Home</a>
+        </div>
+        <p class="thank-you">Payment Done Successfully</p>
+    </div>
+</body>
+</html>

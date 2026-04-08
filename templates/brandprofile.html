@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link href="{% static 'css/brandprofile.css' %}" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+<div class="container py-5">
+
+    <!-- Profile Header -->
+    <div class="card shadow-lg border-0 profile-card mb-4">
+        <div class="card-body text-center">
+
+            {% if brand.logo %}
+                <img src="{{ brand.logo.url }}" class="brand-logo mb-3" height="200px">
+            {% else %}
+                <img src="{% static 'images/default.png' %}" class="brand-logo mb-3">
+            {% endif %}
+
+            <h2 class="fw-bold">{{ brand.brand_name }}</h2>
+            <p class="text-muted">{{ brand.industry|title }} Industry</p>
+
+            <p>
+                <i class="bi bi-geo-alt"></i>
+                {{ brand.city }}, {{ brand.country }}
+            </p>
+
+            {% if brand.website %}
+            <a href="{{ brand.website }}" target="_blank" class="btn btn-dark btn-sm">
+                Visit Website
+            </a>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="mb-3">About Brand</h4>
+            <p>{{ brand.description }}</p>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <strong>Target Audience:</strong>
+                    <p>{{ brand.target_audience }}</p>
+                </div>
+                <div class="col-md-6">
+                    <strong>Mission:</strong>
+                    <p>{{ brand.mission }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company Details -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="mb-3">Company Information</h4>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>Year Established</strong>
+                    <p>{{ brand.year_established }}</p>
+                </div>
+
+                <div class="col-md-4">
+                    <strong>Company Size</strong>
+                    <p>{{ brand.company_size }}</p>
+                </div>
+
+                <div class="col-md-4">
+                    <strong>USP</strong>
+                    <p>{{ brand.usp }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="mb-3">Contact Details</h4>
+
+            <p><strong>Email:</strong> {{ brand.business_email }}</p>
+            <p><strong>Phone:</strong> {{ brand.contact_number }}</p>
+        </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="card shadow-sm">
+        <div class="card-body text-center">
+            <h4 class="mb-3">Social Media</h4>
+
+            {% if brand.instagram %}
+            <a href="{{ brand.instagram }}" target="_blank" class="btn btn-outline-danger m-1">Instagram</a>
+            {% endif %}
+
+            {% if brand.youtube %}
+            <a href="{{ brand.youtube }}" target="_blank" class="btn btn-outline-danger m-1">YouTube</a>
+            {% endif %}
+
+            {% if brand.facebook %}
+            <a href="{{ brand.facebook }}" target="_blank" class="btn btn-outline-primary m-1">Facebook</a>
+            {% endif %}
+
+            {% if brand.linkedin %}
+            <a href="{{ brand.linkedin }}" target="_blank" class="btn btn-outline-dark m-1">LinkedIn</a>
+            {% endif %}
+
+        </div>
+    </div>
+
+</div>
+</main>
+{% endblock %}

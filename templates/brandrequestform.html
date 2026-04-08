@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block more_css %}
+<link rel="stylesheet" href="{% static 'css/brandrequestform.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="br-container">
+
+  <div class="br-card">
+
+    <!-- Brand Logo -->
+    <div class="br-header">
+      <img src="{{ brand.brand_logo.url }}" alt="Brand Logo">
+      <h2>Brand Collaboration Request</h2>
+    </div>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label>Campaign Name</label>
+        <input type="text" name="campaign_name" placeholder="Enter campaign name">
+      </div>
+
+      <div class="form-group">
+        <label>Required Content</label>
+        <textarea name="required_content" placeholder="Describe content requirements"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Budget</label>
+        <input type="number" name="budget" placeholder="Enter budget">
+      </div>
+
+      <div class="form-group">
+        <label>Deadline</label>
+        <input type="date" name="deadline">
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="send-btn">Send Request</button>
+        <a href="{% url 'allbrand' %}" class="back-btn">Back</a>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+{% endblock %}

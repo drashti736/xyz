@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<style>
+/* ================== GENERAL ================== */
+.hero-img img {
+  max-width: 100%;
+}
+
+/* ================== BUTTONS ================== */
+.brand-btn {
+  background: #5b8cff !important;
+  color: #fff;
+  border-radius: 16px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.influencer-btn {
+  background: #5b8cff;   /* SAME AS BRAND */
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.brand-btn:hover,
+.influencer-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(91, 140, 255, 0.3);
+}
+/* ================== FEATURES ================== */
+.card {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ================== MARQUEE ================== */
+.auto-scroll-img {
+  height: 50px;
+  margin: 0 40px;
+  object-fit: contain;
+}
+
+/* ================== STATS ================== */
+.stats-section h2 {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* ================== FOOTER ================== */
+#footer {
+  background: #0f172a;
+}
+
+.footer-link {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer-link:hover {
+  color: white;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  h1.display-5 {
+    font-size: 2.2rem;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+  }
+
+  .auto-scroll-img {
+    height: 40px;
+    margin: 0 20px;
+  }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<main>
+
+<!-- ================== HERO ================== -->
+<section class="container py-5">
+  <div class="row align-items-center text-center text-lg-start">
+    <div class="col-lg-6">
+      <h1 class="fw-bold display-5">
+        The Smart Way for<br>Brands & Influencers<br>to Connect
+      </h1>
+      <p class="text-secondary fs-5">
+        Launch campaigns, collaborate securely, and manage payments — all in one place.
+      </p>
+    </div>
+
+    <div class="col-lg-6 text-center hero-img">
+      <img src="{% static 'images/pimage.png' %}" class="img-fluid">
+    </div>
+  </div>
+</section>
+
+<!-- ================== FEATURES ================== -->
+<section class="container py-5">
+  <h2 class="text-center section-title mb-5">Why Choose INFLUERA?</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card p-4 text-center">
+        <h5>📢 Campaign Management</h5>
+        <p>Create and manage campaigns easily.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4 text-center">
+        <h5>💬 Secure Chat</h5>
+        <p>Safe communication between brands & influencers.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4 text-center">
+        <h5>💳 Fast Payments</h5>
+        <p>Transparent and quick payment system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== TRUSTED BRANDS ================== -->
+<section class="container py-5 text-center">
+  <h2 class="section-title mb-4">Trusted by Growing Brands</h2>
+  <p class="text-secondary mb-5">
+    Empowering startups and emerging businesses worldwide
+  </p>
+
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    <img src="{% static 'images/zara.png' %}" class="auto-scroll-img">
+    <img src="{% static 'images/adidas.png' %}" class="auto-scroll-img">
+    <img src="{% static 'images/iphone2.png' %}" class="auto-scroll-img">
+    <img src="{% static 'images/maybelline2.png' %}" class="auto-scroll-img">
+    <img src="{% static 'images/gucci2.png' %}" class="auto-scroll-img">
+    <img src="{% static 'images/amazon.png' %}" class="auto-scroll-img">
+    <img src="{% static 'images/tata2.png' %}" class="auto-scroll-img">
+  </marquee>
+</section>
+
+<!-- ================== HOW IT WORKS ================== -->
+<section class="container py-5 bg-light rounded">
+  <h2 class="text-center section-title mb-4">How INFLUERA Works</h2>
+  <div class="row text-center gy-4">
+    <div class="col-md-2 col-6"><h6>Create Account</h6><p class="small">Sign up easily</p></div>
+    <div class="col-md-2 col-6"><h6>Build Profile</h6><p class="small">Add details</p></div>
+    <div class="col-md-2 col-6"><h6>Launch / Apply</h6><p class="small">Post or apply</p></div>
+    <div class="col-md-2 col-6"><h6>Collaborate</h6><p class="small">Chat securely</p></div>
+    <div class="col-md-2 col-6"><h6>Create</h6><p class="small">Submit content</p></div>
+    <div class="col-md-2 col-6"><h6>Get Paid</h6><p class="small">Fast payments</p></div>
+  </div>
+</section>
+
+<!-- ================== STATS ================== -->
+<section class="container py-5 text-center stats-section">
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-3 col-6"><h2>5k+</h2><p>Influencers</p></div>
+    <div class="col-md-3 col-6"><h2>2k+</h2><p>Brands</p></div>
+    <div class="col-md-3 col-6"><h2>Featured</h2><p>Top Collaborations</p></div>
+  </div>
+</section>
+
+<!-- ================== FOOTER ================== -->
+<footer id="footer" class="pt-5 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6">
+        <h4 class="fw-bold text-white mb-3">INFLUERA</h4>
+        <p class="text-light small">
+          INFLUERA connects brands with the right creators to launch impactful campaigns.
+        </p>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-semibold text-white mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'home' %}" class="footer-link">Home</a></li>
+          <li><a href="{% url 'about' %}" class="footer-link">About</a></li>
+          <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+           
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h5 class="fw-semibold text-white mb-3">Contact</h5>
+        <p class="text-light small">📧 nandaniyahetvi92@gmail.com</p>
+        <p class="text-light small">📞 +91 7863055751</p>
+        <p class="text-light small">📍 India</p>
+      </div>
+
+    </div>
+
+    <hr class="border-light opacity-25 my-4">
+    <div class="text-center text-light small pb-3">
+      © 2025 <strong>INFLUERA</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+</main>
+{% endblock %}

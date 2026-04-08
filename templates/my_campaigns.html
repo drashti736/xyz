@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block more_css %}
+<style>
+    /* Page background */
+
+body{
+    background:#f5f7fb;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Page title */
+
+h3{
+    font-weight:700;
+    color:#2c3e50;
+}
+
+/* Campaign card */
+
+.card{
+    border:none;
+    border-radius:16px;
+    transition:all 0.35s ease;
+    background:white;
+    position:relative;
+}
+
+/* Hover effect */
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Card content */
+
+.card h5{
+    font-weight:700;
+    color:#1f2937;
+}
+
+.card p{
+    font-size:0.9rem;
+    color:#555;
+}
+
+/* Budget highlight */
+
+.card p strong{
+    color:#2c3e50;
+}
+
+/* Budget badge */
+
+.card p:first-of-type{
+    font-weight:600;
+    color:#fff;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:6px 12px;
+    border-radius:8px;
+    display:inline-block;
+}
+
+/* Info spacing */
+
+.card p{
+    margin-bottom:8px;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .card{
+        padding:15px;
+    }
+
+    h3{
+        font-size:1.6rem;
+    }
+
+}
+</style>
+{% endblock %}
+{% block content %}
+<main>
+<div class="container py-5">
+
+    <h3 class="mb-4">My Campaigns</h3>
+
+    <div class="row">
+        {% for campaign in campaigns %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm p-3">
+                <h5>{{ campaign.title }}</h5>
+                <p>{{ campaign.description|truncatewords:15 }}</p>
+
+                <p><strong>Budget:</strong> ₹{{ campaign.budget }}</p>
+                <p><strong>Platform:</strong> {{ campaign.preferred_platform|title }}</p>
+
+                <p><strong>Collaboration:</strong> {{ campaign.collaboration_type|title }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p>No campaigns created yet.</p>
+        {% endfor %}
+    </div>
+
+</div>
+</main>
+{% endblock %}
