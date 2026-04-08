@@ -1,0 +1,113 @@
+/* Page wrapper */
+.br-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6fb;
+    padding: 40px 15px;
+}
+
+/* Card */
+.br-card {
+    background: #fff;
+    width: 100%;
+    max-width: 520px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.br-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.br-header img {
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.br-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 90px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4a6cf7;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.send-btn {
+    flex: 1;
+    background: #4a6cf7;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.send-btn:hover {
+    background: #3b5be3;
+}
+
+.back-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: #e9ecef;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background: #dcdfe4;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .br-card {
+        padding: 22px;
+    }
+}

@@ -1,0 +1,11 @@
+body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #F5F9FF, #DDE9FF); }
+        .navbar { background: #EAF1FF; }
+        .nav-link { color: #243B7D; font-weight: 500; margin-left: 14px; }
+        .nav-link:hover { color: #5B8CFF; }
+        .brand-name { font-family: 'Montserrat', sans-serif; font-size: 30px; font-weight: 800; color: #243B7D; }
+        .logo-icon { width: 100px; }
+        .section-title { color: #243B7D; font-weight: 700; }
+        .card { border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, .08); }
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .btn-primary { background: #5B8CFF; border: none; }
+        .btn-primary:hover { background: #4A78E0; }

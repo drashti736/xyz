@@ -1,0 +1,74 @@
+ 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #F5F9FF, #DDE9FF);
+        }
+
+        .navbar {
+            background: #EAF1FF;
+        }
+
+        .nav-link {
+            color: #243B7D;
+            font-weight: 500;
+            margin-left: 14px;
+        }
+
+        .nav-link:hover {
+            color: #5B8CFF;
+        }
+
+        .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            color: #243B7D;
+        }
+
+        .logo-icon {
+            width: 100px;
+        }
+
+        .section-title {
+            color: #243B7D;
+            font-weight: 700;
+        }
+
+        .brand-btn {
+            background: #5B8CFF;
+            color: #fff;
+            border-radius: 14px;
+            padding: 10px 22px;
+            font-weight: 600;
+        }
+
+        .brand-btn:hover {
+            background: #4A78E0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+        }
+
+        .campaign-img {
+            border-radius: 16px;
+            height: 250px;
+            object-fit: fill;
+        }
+
+        .tag {
+            background: #EAF1FF;
+            color: #243B7D;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        footer {
+            background: #1E2A4A;
+            color: #fff;
+        }
+    

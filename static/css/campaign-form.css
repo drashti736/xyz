@@ -1,0 +1,57 @@
+/* Background */
+.campaign-bg {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    min-height: 100vh;
+}
+
+/* Card */
+.campaign-card {
+    border-radius: 20px;
+    border: none;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+.campaign-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Labels */
+.custom-label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Input Styling */
+.campaign-card input,
+.campaign-card select,
+.campaign-card textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+.campaign-card input:focus,
+.campaign-card select:focus,
+.campaign-card textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #333;
+}

@@ -1,0 +1,17 @@
+body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #F5F9FF, #DDE9FF);
+    }
+
+    /* LOGO */
+    .brand-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: #243B7D;
+    }
+
+    .logo-icon {
+        width: 110px;
+    }

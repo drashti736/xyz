@@ -1,0 +1,35 @@
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#F5F9FF,#DDE9FF);
+}
+
+.form-card{
+    background:#fff;
+    border-radius:22px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.form-control, .form-select{
+    border-radius:14px;
+    padding:12px 14px;
+}
+
+.form-control:focus, .form-select:focus{
+    border-color:#5B8CFF;
+    box-shadow:0 0 0 .15rem rgba(91,140,255,.25);
+}
+
+.submit-btn{
+    background:#5B8CFF;
+    color:#fff;
+    border:none;
+    border-radius:16px;
+    padding:12px;
+    font-weight:600;
+}
+
+.submit-btn:hover{
+    background:#4A78E0;
+}
+

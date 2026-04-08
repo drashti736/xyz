@@ -1,0 +1,204 @@
+
+/* HERO */
+.marketplace-hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:70px 80px;
+}
+.hero-text{max-width:520px}
+.hero-text h1{font-size:42px;margin-bottom:15px}
+.hero-text p{color:#666;margin-bottom:25px}
+.hero-img img{width:500px}
+
+.btn{
+  padding:10px 22px;
+  border-radius:10px;
+  border:none;
+  background: linear-gradient(135deg, #5b7cff 0%, #8b5cf6 100%);
+  color:#fff;
+  font-weight:500;
+  cursor:pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(91, 124, 255, 0.3);
+}
+
+/* SEARCH */
+.search-box{
+  background:#fff;
+  margin:0 80px;
+  padding:18px;
+  border-radius:14px;
+  display:flex;
+  gap:12px;
+  box-shadow:0 12px 25px rgba(0,0,0,.08)
+}
+.search-box input,.search-box select{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+/* SECTION */
+section{padding:60px 80px}
+section h2{margin-bottom:25px}
+
+/* CREATOR CARDS - List View */
+.cards{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:25px
+}
+.card{
+  background:#fff;
+  padding:22px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.07);
+  display:flex;
+  align-items:center;
+  gap:20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.1);
+}
+.card img{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.card .card-content{
+  text-align:left;
+}
+.tag{
+  display:inline-block;
+  background:#eef1ff;
+  color:#5b7cff;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin:8px 0
+}
+
+/* CATEGORIES */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px
+}
+
+
+
+.category{
+  background:#fff;
+  padding: 25px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+.category img{width:100px;
+  height: 100px;
+  margin-bottom:12px}
+
+/* HOW IT WORKS */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px
+}
+.step{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.06)
+}
+
+/* ANIMATIONS */
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-in-left { animation: slideInLeft 1s ease-out; }
+.slide-in-right { animation: slideInRight 1s ease-out; }
+.fade-in { animation: fadeIn 1s ease-out; }
+
+/* DARK MODE */
+.dark-mode {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #e0e0e0;
+}
+.dark-mode .navbar {
+  background: linear-gradient(90deg, #2d2d2d 0%, #3d3d3d 100%);
+}
+.dark-mode .nav-link {
+  color: #b0b0b0;
+}
+.dark-mode .nav-link:hover {
+  color: #ffffff;
+}
+.dark-mode .brand-name {
+  color: #ffffff;
+}
+.dark-mode .marketplace-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+.dark-mode .hero-text p {
+  color: #b0b0b0;
+}
+.dark-mode .search-box {
+  background: #3d3d3d;
+}
+.dark-mode .search-box input, .dark-mode .search-box select {
+  background: #4d4d4d;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+.dark-mode .card {
+  background: #3d3d3d;
+  color: #e0e0e0;
+}
+.dark-mode .tag {
+  background: #4d4d4d;
+  color: #b0b0b0;
+}
+.dark-mode .category {
+  background: #3d3d3d;
+  color: #e0e0e0;
+}
+.dark-mode .step {
+  background: #3d3d3d;
+  color: #e0e0e0;
+}
+.dark-mode .testimonial {
+  background: #3d3d3d;
+  color: #e0e0e0;
+}
+.dark-mode footer {
+  background: #1a1a1a;
+}
+
+@media(max-width:900px){
+  .marketplace-hero{flex-direction:column;text-align:center}
+  .hero-img img{width:100%;margin-top:30px}
+  section,.marketplace-hero,.search-box{padding:40px 25px;margin:0 25px}
+}

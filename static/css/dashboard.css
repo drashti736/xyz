@@ -1,0 +1,245 @@
+/* MAIN CONTENT AREA */
+main {
+    background: #f5f7fb;
+}
+
+/* Dashboard Title */
+h2 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* INFO CARDS */
+.card {
+    border: none;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* Card Headings */
+.card h6 {
+    color: #888;
+    font-size: 14px;
+}
+
+.card h5 {
+    font-weight: 600;
+}
+
+/* BRAND DESCRIPTION */
+.card-body p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CAMPAIGN APPLICATIONS
+   ========================= */
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: linear-gradient(90deg,#4e73df,#6f42c1);
+    color: white;
+    font-size: 15px;
+}
+
+.table thead th {
+    border: none;
+}
+
+.table tbody tr {
+    transition: all 0.25s ease;
+}
+
+.table tbody tr:hover {
+    background: #f2f5ff;
+}
+
+/* Buttons */
+.btn-success {
+    background: linear-gradient(45deg,#28a745,#20c997);
+    border: none;
+    padding: 5px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.btn-success:hover {
+    opacity: 0.9;
+}
+
+.btn-danger {
+    background: linear-gradient(45deg,#dc3545,#ff6b6b);
+    border: none;
+    padding: 5px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.btn-danger:hover {
+    opacity: 0.9;
+}
+
+/* Status Badges */
+.badge {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   MY APPLICATIONS
+   ========================= */
+
+.card-body > div {
+    background: #f8f9ff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #4e73df;
+    transition: 0.3s;
+}
+
+.card-body > div:hover {
+    background: #eef1ff;
+    /* transform: translateX(4px); */
+}
+
+/* Application Labels */
+.card-body strong {
+    color: #2c3e50;
+}
+
+/* Divider */
+.card hr {
+    margin: 18px 0;
+    border-color: #eaeaea;
+}
+
+
+/* EMPTY MESSAGE */
+.text-muted {
+    font-size: 15px;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width:768px){
+
+    .table thead {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+}
+
+
+/* PAGE HEIGHT */
+html, body {
+    height: 100%;
+}
+
+/* SIDEBAR FIXED */
+.sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 25%;        /* same as col-md-3 */
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* MAIN CONTENT SCROLL */
+main .col-md-9 {
+    margin-left: 25%;  /* push content beside sidebar */
+    height: 100vh;
+    overflow-y: auto;
+    background: #f5f7fb;
+}
+
+/* Scrollbar styling (optional but nice) */
+main .col-md-9::-webkit-scrollbar {
+    width: 6px;
+}
+
+main .col-md-9::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+main .col-md-9::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+
+/* Small Application Cards */
+
+.app-card {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+}
+
+/* Campaign title */
+
+.campaign-title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Message */
+
+.app-message {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Status badges */
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Status colors */
+
+.status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
